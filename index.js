@@ -4,7 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const helmet = require("helmet");
 
-const usuariosRoute = require("./routes/login.route");
+const usuariosRoute = require("./routes/usuario.route");
 
 app.use(cors());
 app.use(helmet());
