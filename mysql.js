@@ -12,15 +12,12 @@ const connection = mysql2.createConnection({
 exports.execute = (query, params = [], pool = connection) => {
     return new Promise((resolve, reject) => {
        pool.query(query, params, (err, results) => {
-        if (error){
-             reject(error);
+        if (err){
+             reject(err);
         }
         else {
             resolve(results);
         }
-
-
-
     });
  });
 }
